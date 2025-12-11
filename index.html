@@ -10,7 +10,7 @@
   })(window,document,'script','dataLayer','GTM-T5M7TGK');</script>
   <!-- End Google Tag Manager -->
 
-  <!-- Google tag (Google Ads gtag.js) -->
+  <!-- Google Ads global tag -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10832482936"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,7 +18,6 @@
     gtag('js', new Date());
     gtag('config', 'AW-10832482936');
   </script>
-  <!-- End Google Ads -->
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -228,6 +227,7 @@
     <a
       class="whatsapp-btn"
       href="https://wa.me/5519988345207?text=Ol%C3%A1%2C+quero+fazer+um+or%C3%A7amento+de+materiais."
+      onclick="return gtag_report_conversion('https://wa.me/5519988345207?text=Ol%C3%A1%2C+quero+fazer+um+or%C3%A7amento+de+materiais.');"
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -240,5 +240,25 @@
       Resposta rápida no horário comercial.
     </p>
   </main>
+
+  <!-- Conversion event: clique para ligar -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-10832482936/vO_3CPnN8M8bEPikqq0o',
+          'value': 1.0,
+          'currency': 'BRL',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+  <!-- End conversion script -->
+
 </body>
 </html>
